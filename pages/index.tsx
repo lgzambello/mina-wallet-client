@@ -5,12 +5,16 @@ import { Properties } from "csstype";
 import { useState } from "react";
 import MinaClient from "../api/MinaClient";
 import AccountDetails from "../types/AccountDetails";
+import WalletSelector from "../components/WalletSelector";
+import WalletView from "../components/WalletView";
 
 const Home = () => {
   const minaClient = new MinaClient();
-  const [publicKey, setPublicKey] = useState();
+  const [selectedWallet, setSelectedWallet] = useState<string>();
+  const [wallets, setWallets] = useState<string[]>();
   const [accountDetails, setAccountDetails] = useState<AccountDetails>();
   const [buttonText, setButtonText] = useState("Connect your wallet");
+
   const onConnect = async () => {
     if (!window.mina) {
       alert("No provider was found, please add the Auro Wallet extension");
@@ -22,8 +26,8 @@ const Home = () => {
         setButtonText(data.message);
       } else {
         let publicKeys = data;
-        setPublicKey(publicKeys);
-        console.log(JSON.stringify(publicKey));
+        setWallets(publicKeys);
+        setSelectedWallet(publicKeys[0]);
         getAccountDetails(publicKeys[0]);
       }
     }
@@ -38,6 +42,12 @@ const Home = () => {
       alert("Error retrieving account details for public key: " + publicKey);
     }
   };
+
+  const selectWallet = (publicKey: string) => {
+    setSelectedWallet(publicKey);
+    getAccountDetails(publicKey);
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -49,13 +59,23 @@ const Home = () => {
       <main className={styles.main}>
         <div style={containerStyle}>
           <h1 className={styles.title}>Welcome to Mina Guardian Wallet</h1>
-          {accountDetails === undefined ? (
+          {accountDetails == undefined ||
+          selectedWallet == undefined ||
+          wallets == undefined ? (
             <button style={connectButtonStyle} onClick={onConnect}>
               {buttonText}
             </button>
           ) : (
             <div style={walletContainerStyle}>
-              {"Balance: " + accountDetails.account.balance.total}
+              <WalletSelector
+                selectedWallet={selectedWallet}
+                onSelect={selectWallet}
+                wallets={wallets}
+              />
+              <WalletView
+                publicKey={selectedWallet}
+                balance={accountDetails.account.balance.total}
+              />
             </div>
           )}
         </div>
