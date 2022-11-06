@@ -25,9 +25,10 @@ const buttonStyle: Properties = {
   outline: "none",
   border: "none",
   fontSize: "2rem",
-  marginRight: "5%",
+  marginRight: "25px",
   whiteSpace: "nowrap",
   fontFamily: "revert",
+  fontWeight: 200,
 };
 
 const selectedButtonStyle: Properties = {
