@@ -9,8 +9,8 @@ import {
 const baseURL = "https://sandbox.plaid.com";
 const clientId = "61705ce5d8717a0013306fba";
 const secret = "ae64ab651df9fb650d53f1a5c9ec41";
-const accessToken = "access-sandbox-53fcf7bc-2652-4e16-ac8e-f324d3de91c6";
-const itemId = "oEA3E16wRqCNnz57Vvp6HVVZZdjXd9uRkzgpa";
+const accessToken = "access-sandbox-7859b4aa-c203-4309-b8e2-30f3fe921e17";
+const itemId = "qnyK9p4KAEf4q1QjAlmACnE3BdxGqmidvxBVB";
 
 class PlaidClient {
   public getLinkToken = async (): Promise<AxiosResponse<string>> => {

@@ -1,7 +1,7 @@
 {
   "accounts": [
     {
-      "account_id": "BP7nPLo3qGugVoZblm9xSWWj6P1VkqHL7KneR",
+      "account_id": "AjELpbyLKringjqm5GB5Cm1KPNj9Qqf6GDDGN",
       "balances": {
         "available": 100,
         "current": 110,
@@ -12,6 +12,69 @@
       "mask": "0000",
       "name": "Plaid Checking",
       "official_name": "Plaid Gold Standard 0% Interest Checking",
+      "owners": [
+        {
+          "addresses": [
+            {
+              "data": {
+                "city": "Malakoff",
+                "country": "US",
+                "postal_code": "14236",
+                "region": "NY",
+                "street": "2992 Cameron Road"
+              },
+              "primary": true
+            },
+            {
+              "data": {
+                "city": "San Matias",
+                "country": "US",
+                "postal_code": "93405-2255",
+                "region": "CA",
+                "street": "2493 Leisure Lane"
+              },
+              "primary": false
+            }
+          ],
+          "emails": [
+            {
+              "data": "accountholder0@example.com",
+              "primary": true,
+              "type": "primary"
+            },
+            {
+              "data": "accountholder1@example.com",
+              "primary": false,
+              "type": "secondary"
+            },
+            {
+              "data": "extraordinarily.long.email.username.123456@reallylonghostname.com",
+              "primary": false,
+              "type": "other"
+            }
+          ],
+          "names": [
+            "Alberta Bobbeth Charleson"
+          ],
+          "phone_numbers": [
+            {
+              "data": "1112223333",
+              "primary": false,
+              "type": "home"
+            },
+            {
+              "data": "1112224444",
+              "primary": false,
+              "type": "work"
+            },
+            {
+              "data": "1112225555",
+              "primary": false,
+              "type": "mobile"
+            }
+          ]
+        }
+      ],
       "subtype": "checking",
       "type": "depository"
     }
@@ -21,25 +84,26 @@
       "assets",
       "balance",
       "credit_details",
-      "identity",
       "income",
       "investments",
       "liabilities",
       "transactions"
     ],
     "billed_products": [
-      "auth"
+      "auth",
+      "identity"
     ],
     "consent_expiration_time": null,
     "error": null,
     "institution_id": "ins_56",
-    "item_id": "oEA3E16wRqCNnz57Vvp6HVVZZdjXd9uRkzgpa",
+    "item_id": "qnyK9p4KAEf4q1QjAlmACnE3BdxGqmidvxBVB",
     "optional_products": null,
     "products": [
-      "auth"
+      "auth",
+      "identity"
     ],
     "update_type": "background",
     "webhook": ""
   },
-  "request_id": "wDXDAR0X8UqXVf7"
+  "request_id": "S8F3r785WEO5Jys"
 }
