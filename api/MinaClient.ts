@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from "axios";
 import AccountDetails from "../types/AccountDetails";
 
-const baseURL = "https://api.minaexplorer.com";
+const baseURL = "https://devnet.api.minaexplorer.com";
 
 class MinaClient {
   private client = axios.create({ baseURL });

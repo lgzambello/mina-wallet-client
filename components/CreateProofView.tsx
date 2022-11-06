@@ -3,6 +3,7 @@ import Button from "./Button";
 import { Properties } from "csstype";
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import Colors from "../constants/Colors";
+import { PlaidLink } from "react-plaid-link";
 
 enum PROOF_TYPE {
   NET_WORTH,
@@ -26,11 +27,10 @@ const CreateProofView = () => {
       <h3 style={{ fontWeight: 500 }}>
         Please connect your bank account to continue
       </h3>
-      <Button
-        value="Connect Bank Account"
-        onClick={() => alert("Coming soon you impatient asshole!")}
-        style={buttonStyle}
-      />
+      <PlaidLink
+        token={"link-sandbox-5384bcab-8b4f-4434-8072-ef04bcd8e285"}
+        onSuccess={success => console.log(success)}>Connect Bank Account
+      </PlaidLink>
     </div>
   );
 };
