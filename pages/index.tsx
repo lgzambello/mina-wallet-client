@@ -8,6 +8,7 @@ import WalletSelector from "../components/WalletSelector";
 import WalletView from "../components/WalletView";
 import HomeTabs, { HomeTab } from "../components/HomeTabs";
 import CreateProofView from "../components/CreateProofView";
+import InboxView from "../components/InboxView";
 
 const Home = () => {
   const minaClient = new MinaClient();
@@ -72,7 +73,7 @@ const Home = () => {
       case HomeTab.SEND_VERIFICATION:
         return <CreateProofView />;
       default:
-        return <div>Wassup</div>;
+        return <InboxView />;
     }
   };
 
