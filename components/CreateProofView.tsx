@@ -28,7 +28,7 @@ const CreateProofView = () => {
         Please connect your bank account to continue
       </h3>
       <PlaidLink
-        token={"link-sandbox-5384bcab-8b4f-4434-8072-ef04bcd8e285"}
+        token={"link-sandbox-a0d983b5-39c5-4c31-8733-ad88584bef8d"}
         onSuccess={success => console.log(success)}>Connect Bank Account
       </PlaidLink>
     </div>
