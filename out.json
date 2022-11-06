@@ -1,0 +1,45 @@
+{
+  "accounts": [
+    {
+      "account_id": "BP7nPLo3qGugVoZblm9xSWWj6P1VkqHL7KneR",
+      "balances": {
+        "available": 100,
+        "current": 110,
+        "iso_currency_code": "USD",
+        "limit": null,
+        "unofficial_currency_code": null
+      },
+      "mask": "0000",
+      "name": "Plaid Checking",
+      "official_name": "Plaid Gold Standard 0% Interest Checking",
+      "subtype": "checking",
+      "type": "depository"
+    }
+  ],
+  "item": {
+    "available_products": [
+      "assets",
+      "balance",
+      "credit_details",
+      "identity",
+      "income",
+      "investments",
+      "liabilities",
+      "transactions"
+    ],
+    "billed_products": [
+      "auth"
+    ],
+    "consent_expiration_time": null,
+    "error": null,
+    "institution_id": "ins_56",
+    "item_id": "oEA3E16wRqCNnz57Vvp6HVVZZdjXd9uRkzgpa",
+    "optional_products": null,
+    "products": [
+      "auth"
+    ],
+    "update_type": "background",
+    "webhook": ""
+  },
+  "request_id": "wDXDAR0X8UqXVf7"
+}
