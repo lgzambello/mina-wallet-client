@@ -1,9 +1,10 @@
 import * as React from "react";
 import { Properties } from "csstype";
+import { convertToMinaCoin, convertToUsd } from "../utils/UtilityFunctions";
 
 interface WalletViewProps {
-  publicKey: String;
-  balance: String;
+  publicKey: string;
+  balance: string;
 }
 
 const WalletView = ({ publicKey, balance }: WalletViewProps) => {
@@ -13,7 +14,7 @@ const WalletView = ({ publicKey, balance }: WalletViewProps) => {
       <h3 style={headerStyle}>Public Key</h3>
       <p style={valueStyle}>{publicKey}</p>
       <h3 style={headerStyle}>Balance</h3>
-      <p style={valueStyle}>{balance}</p>
+      <p style={valueStyle}>{convertToMinaCoin(parseInt(balance))}</p>
     </div>
   );
 };
