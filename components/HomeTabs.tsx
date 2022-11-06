@@ -41,6 +41,8 @@ const containerStyle: Properties = {
   flexDirection: "row",
   alignSelf: "flex-start",
   width: "100%",
+  borderBottom: "3px solid " + Colors.PRIMARY,
+  paddingBottom: "5px",
 };
 
 const brandNameStyle: Properties = {

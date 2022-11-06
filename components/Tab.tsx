@@ -1,6 +1,7 @@
 import * as React from "react";
 import { HomeTab } from "./HomeTabs";
 import { Properties } from "csstype";
+import Colors from "../constants/Colors";
 
 interface TabProps {
   value: HomeTab;
@@ -27,8 +28,9 @@ const buttonStyle: Properties = {
   fontSize: "2rem",
   marginRight: "25px",
   whiteSpace: "nowrap",
-  fontFamily: "revert",
   fontWeight: 200,
+  color: Colors.PRIMARY,
+  fontFamily: "serif",
 };
 
 const selectedButtonStyle: Properties = {
